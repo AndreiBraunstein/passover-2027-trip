@@ -373,6 +373,7 @@
     display: flex;
     align-items: stretch;
     position: relative;
+    height: 118px;
   }
 
   /* Right column: time axis + thermometer tube */
@@ -564,6 +565,7 @@
     border-top: 1px dashed var(--border);
   }
   .accordion-panel.open { display: block; }
+  .thermo-row.has-open-card { height: auto; min-height: 118px; }
 
   .activity-meta {
     font-size: 0.82rem;
@@ -674,7 +676,7 @@
     <button class="sidebar-close" id="close-sidebar" aria-label="סגור">✕</button>
   </div>
   <div class="sidebar-tabs">
-    <button class="sidebar-tab-btn active" id="tab-days-btn">📅 ימי הטיול (17)</button>
+    <button class="sidebar-tab-btn active" id="tab-days-btn">📅 ימי הטיול (16)</button>
     <button class="sidebar-tab-btn" id="tab-vault-btn">🛂 דרכונים ומסמכים</button>
   </div>
   <div class="sidebar-content" id="sidebar-days-list"></div>
@@ -739,8 +741,8 @@
       <span>המראה מתל אביב 05:40 ⬅️ נחיתה בקרקוב 08:30</span>
     </div>
     <div class="flight-pill">
-      <span>🛬 <strong>סיום (29.04.2027):</strong></span>
-      <span>המראה מקרקוב 23:55 ⬅️ נחיתה בתל אביב 04:25</span>
+      <span>🛬 <strong>סיום (28.04.2027):</strong></span>
+      <span>המראה מקרקוב 23:55 ⬅️ נחיתה בתל אביב 04:25 (29.04)</span>
     </div>
   </div>
 </header>
@@ -1700,8 +1702,8 @@ const tripDays = [
         "address": "Lwowska 1, 30-548 Kraków",
         "lat": 50.0468,
         "lng": 19.9565,
-        "desc": "קבלת חדרים לשהייה רציפה עד ערב הטיסה חזרה (26.04 – 29.04 בערב). כולל ארוחת בוקר ומעלית.",
-        "hours": "צ'ק-אין מ-15:00 | צ'ק-אאוט מאוחר ב-29.04 בערב",
+        "desc": "קבלת חדרים לשהייה רציפה עד ערב הטיסה חזרה (26.04 – 28.04 בערב). כולל ארוחת בוקר ומעלית.",
+        "hours": "צ'ק-אין מ-15:00 | צ'ק-אאוט מאוחר ב-28.04 בערב",
         "web": "https://www.booking.com/Share-PUiH8U"
       }
     ]
@@ -1772,41 +1774,41 @@ const tripDays = [
   {
     "dayNum": 16,
     "date": "28.04.2027",
-    "dayName": "יום רביעי",
-    "region": "קרקוב, פולין",
+    "dayName": "יום רביעי — יום החזרה הביתה",
+    "region": "קרקוב ⬅️ נמל התעופה באליצה (KRK)",
     "theme": "krakow",
-    "hotelInfo": "לילה 3 ב-Lwowska 1, Kraków",
+    "hotelInfo": "החדר שמור לכם עד היציאה לשדה בערב! (המראה 23:55, נחיתה 29.04 ב-04:25)",
     "activities": [
       {
         "time": "08:00 – 09:30",
-        "title": "ארוחת בוקר במלון",
+        "title": "ארוחת בוקר רגועה במלון",
         "address": "Lwowska 1, Kraków",
         "lat": 50.0468,
         "lng": 19.9565,
-        "desc": "בוקר רגוע וארוחת בוקר לפני יום קניות והשלמות.",
+        "desc": "אין צ'ק-אאוט בבוקר! קמים בנחת, אוכלים ארוחת בוקר במלון ומתארגנים ליום האחרון.",
         "hours": "07:00 – 10:30"
       },
       {
-        "time": "10:00 – 15:30",
+        "time": "10:00 – 14:30",
         "title": "קניות והשלמות במתחם Bonarka City Center + ארוחת צהריים",
         "highlight": true,
         "address": "Kamieńskiego 11, 30-644 Kraków",
         "lat": 50.0282,
         "lng": 19.9495,
-        "desc": "מרכז קניות ענק, מרווח ונוח מאוד לחניה (ממש 7 דקות נסיעה מ-Lwowska 1). כולל חנויות אופנה, ספורט, ציוד, סופרמרקט Auchan ענק למזכרות ושוקולדים הביתה ומתחם אוכל גדול לארוחת צהריים.",
+        "desc": "מרכז קניות ענק, מרווח ונוח מאוד לחניה (7 דקות נסיעה מ-Lwowska 1). כולל חנויות אופנה, ספורט, ציוד, סופרמרקט Auchan ענק למזכרות ושוקולדים הביתה ומתחם אוכל גדול לארוחת צהריים.",
         "hours": "10:00 – 21:00",
         "web": "https://www.bonarkacitycenter.pl/en",
         "costPerPerson": "כניסה וחניה חינם",
         "costTotal": "חינם"
       },
       {
-        "time": "15:30 – 18:00",
-        "title": "חזרה למלון למנוחה וארגון מזוודות",
+        "time": "14:30 – 18:00",
+        "title": "מנוחת 'לפני טיסה' בחדר וארגון מזוודות",
         "address": "Lwowska 1, Kraków",
         "lat": 50.0468,
         "lng": 19.9565,
-        "desc": "פורקים את הקניות, מארגנים את רוב המזוודות לקראת מחר ונחים.",
-        "hours": "15:30 – 18:00"
+        "desc": "חזרה למלון למנוחה מלאה של אחה\"צ, מקלחות ואריזה סופית של כל המזוודות לקראת טיסת הלילה.",
+        "hours": "14:30 – 18:00"
       },
       {
         "time": "18:30 – 20:30",
@@ -1815,51 +1817,11 @@ const tripDays = [
         "address": "Świętej Gertrudy 26-29, 31-048 Kraków",
         "lat": 50.0561,
         "lng": 19.9405,
-        "desc": "אחת המסעדות המפורסמות והחווייתיות בקרקוב למרגלות טירת ואוול! מלצרים בלבוש מסורתי, מנות בשר ענקיות על מחבתות ברזל, מוזיקה שמחה ואווירה כפרית תוססת שהילדים מתלהבים ממנה.",
+        "desc": "אחת המסעדות המפורסמות והחווייתיות בקרקוב למרגלות טירת ואוול! מלצרים בלבוש מסורתי, מנות בשר ענקיות על מחבתות ברזל, מוזיקה שמחה ואווירה כפרית תוססת לסיום הטיול.",
         "hours": "12:00 – 23:00",
         "web": "https://podwawelem.eu/en",
         "costPerPerson": "כ-60–80 PLN לאדם",
         "costTotal": "כ-320 PLN לארוחה משפחתית"
-      }
-    ]
-  },
-  {
-    "dayNum": 17,
-    "date": "29.04.2027",
-    "dayName": "יום חמישי — יום החזרה הביתה",
-    "region": "קרקוב ⬅️ נמל התעופה באליצה (KRK)",
-    "theme": "krakow",
-    "hotelInfo": "החדר שמור לכם עד היציאה לשדה בערב! (המראה 23:55)",
-    "activities": [
-      {
-        "time": "08:00 – 12:30",
-        "title": "בוקר של צ'יל מוחלט וטיול רגוע בפארק Planty",
-        "highlight": true,
-        "address": "Planty, Kraków",
-        "lat": 50.0605,
-        "lng": 19.9332,
-        "desc": "אין צ'ק-אאוט בבוקר! קמים בלי שעון מעורר, אוכלים ארוחת בוקר בנחת ויוצאים להליכה מישורית וירוקה בפארק פלאנטי המקיף את העיר העתיקה — מדשאות לילדים וספסלים לקפה עבור מיכאלה ומריה.",
-        "hours": "פתוח 24/7",
-        "costPerPerson": "חינם",
-        "costTotal": "חינם"
-      },
-      {
-        "time": "12:30 – 18:30",
-        "title": "ארוחת צהריים ומנוחת 'לפני טיסה' בחדר",
-        "address": "Lwowska 1, Kraków",
-        "lat": 50.0468,
-        "lng": 19.9565,
-        "desc": "ארוחת צהריים קרובה למלון ולאחר מכן חזרה לחדרים למנוחה מלאה של אחה\"צ כדי שכולם יהיו רעננים לקראת טיסת הלילה.",
-        "hours": "12:30 – 18:30"
-      },
-      {
-        "time": "18:30 – 20:30",
-        "title": "ארוחת ערב, מקלחות וקיפולים אחרונים",
-        "address": "Lwowska 1, Kraków",
-        "lat": 50.0468,
-        "lng": 19.9565,
-        "desc": "ארוחת ערב קלילה (אפשר להזמין לחדר או לרדת למסעדה סמוכה), מקלחות לכולם, נעילת מזוודות והתארגנות ליציאה.",
-        "hours": "18:30 – 20:30"
       },
       {
         "time": "20:30",
@@ -1879,8 +1841,8 @@ const tripDays = [
         "address": "Kapitan Mieczysław Medwecki 1, 32-083 Balice",
         "lat": 50.0777,
         "lng": 19.7848,
-        "desc": "מעמיסים את הוואן, נוסעים כ-35 דקות לשדה התעופה של קרקוב, מחזירים את הרכב השכור ונכנסים לבידוק של אל על לקראת ההמראה ב-23:55 (נחיתה בנתב\"ג ב-04:25). טיסה נעימה!",
-        "hours": "המראה 23:55"
+        "desc": "מעמיסים את הוואן, נוסעים כ-35 דקות לשדה התעופה של קרקוב (הגעה לנמל ב-21:30), מחזירים את הרכב השכור ונכנסים לבידוק של אל על לקראת ההמראה ב-23:55 (נחיתה בנתב\"ג לפנות בוקר ב-29.04 בשעה 04:25). טיסה נעימה!",
+        "hours": "המראה 23:55 (28.04) | נחיתה 04:25 (29.04)"
       }
     ]
   }
@@ -2049,10 +2011,7 @@ function renderActiveDay(shouldScrollTop = true) {
 
   const intervals = day.activities.map(act => getActivityInterval(day.date, act.time));
 
-  // Proportional height scaling (1.35px per minute, bounded so short items remain clean and long blocks look taller)
-  const PX_PER_MIN = 1.35;
-  const MIN_ROW_PX = 96;
-  const MAX_ROW_PX = 290;
+  // Uniform fixed height for all timeline segments and cards
 
   let nextTargetAct = null;
   let liveMarkerPlaced = false;
@@ -2113,12 +2072,11 @@ function renderActiveDay(shouldScrollTop = true) {
     }
 
     const durMins = iv ? iv.durationMins : 60;
-    const rowMinHeight = Math.round(Math.min(MAX_ROW_PX, Math.max(MIN_ROW_PX, durMins * PX_PER_MIN)));
-
     const cardKey = `${currentDayIdx}_${actIdx}`;
     const isOpen = expandedCards.has(cardKey);
 
     let rowClasses = ['thermo-row'];
+    if (isOpen) rowClasses.push('has-open-card');
     let cardClasses = ['activity-card'];
     if (status === 'done') {
       rowClasses.push('is-done');
@@ -2149,7 +2107,7 @@ function renderActiveDay(shouldScrollTop = true) {
     const endLabelHtml = (isLast && iv) ? `<div class="thermo-end-time">${iv.endLabel}</div>` : '';
 
     return `
-      <div class="${rowClasses.join(' ')}" style="min-height: ${rowMinHeight}px;">
+      <div class="${rowClasses.join(' ')}">
         <!-- Right-side Vertical Thermometer Axis -->
         <div class="thermo-axis">
           <div class="thermo-start-time">${startLabel}</div>
